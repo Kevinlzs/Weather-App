@@ -5,6 +5,11 @@ const main_status = document.querySelector(".weather-box .weather-box-body .stat
 const max_and_min = document.querySelector(".weather-box .weather-box-body .max-and-min")
 const degree = document.querySelector(".weather-box .weather-box-body .degree")
 const search_button = document.querySelector(".search-box button")
+const weather_today = document.querySelector(".details-box .weather-today")
+const feels_like = document.querySelector(".details-box .feels-like")
+const feels_like_temperature = document.querySelector(".details-box .feels-like-temperature")
+const high_low = document.querySelector(".high-low")
+
 // const image = document.querySelector(".weather-box .weather-box-body .image")
 
 
@@ -38,6 +43,10 @@ search_button.addEventListener("click", () => {
                 max_and_min.innerHTML = "Day " + Math.round(data["main"]["temp_max"] * 9/5 + 32) + ", Night " + Math.round(data["main"]["temp_min"] * 9/5 + 32)
                 document.getElementById("image").src = `imgs/${data["weather"][0]["icon"]}.png`
                 weather_box.style.height = "275px"
+                weather_today.innerHTML = `Weather Today in ${data["name"]}, ${data["sys"]["country"]}`
+                feels_like.innerHTML = `Feels Like`
+                feels_like_temperature.innerHTML = `${Math.round(data["main"]["feels_like"]*9/5+32)}°`
+                high_low.innerHTML = `High/Low ${Math.round(data["main"]["temp_max"] * 9/5 + 32)}°/${ Math.round(data["main"]["temp_min"] * 9/5 + 32)}°`
             });
     }
 })
