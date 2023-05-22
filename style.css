@@ -5,6 +5,7 @@
 
 body {
     background-color: rgb(151, 176, 186);
+    margin-bottom: 100px;
 }
 
 .container{
@@ -61,6 +62,7 @@ body {
     font-size: xx-large;
     color: white;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
 }
 
 .weather-box-header {
@@ -89,7 +91,7 @@ body {
 
 .details-box {
     width: 650px;
-    height: 320px;
+    /* height: 350px; */
     margin: auto;
     margin-top: 5%;
     position: relative;
@@ -98,24 +100,26 @@ body {
     font-size: xx-large;
     color: white;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    text-indent: 10px;
-    padding-top: 5px;
+    text-indent: 15px;
+    /* padding-top: 5px; */
 }
 
 .details-left-box {
-    width:325px;
-    height: 150px;
+    width:650px;
+    /* height: 170px; */
     position: absolute;
     bottom:0;
     background-color: #5891a4;
     font-size:30px;
+    text-indent: 10px;
+    /* padding-top: 15px; */
 }
 
-.details-right-box {
+/* .details-right-box {
     width:325px;
     height: 150px;
-    background-color: blue;
+    background-color: rgb(32, 29, 29);
     float:right;
     margin-top: 5px;
     font-size:30px;
-}
+} */
